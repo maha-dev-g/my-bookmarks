@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahadev Homepage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            color: #4a5568;
+            font-size: 2.5rem;
+            font-weight: 300;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .card h4 {
+            color: #2d3748;
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            text-align: center;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #667eea;
+            font-weight: 600;
+        }
+
+        .section-title {
+            color: #4a5568;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 15px 0 10px 0;
+            text-decoration: underline;
+            text-decoration-color: #667eea;
+        }
+
+        .card a {
+            display: block;
+            color: #4a5568;
+            text-decoration: none;
+            padding: 8px 12px;
+            margin: 3px 0;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+            border-left: 3px solid transparent;
+        }
+
+        .card a:hover {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            transform: translateX(5px);
+            border-left-color: #fff;
+        }
+
+        .card a:before {
+            content: "🔗 ";
+            margin-right: 8px;
+        }
+
+        .vacant-card {
+            background: rgba(200, 200, 200, 0.3);
+            border: 2px dashed #ccc;
+        }
+
+        .vacant-card h4 {
+            color: #999;
+            border-bottom-color: #ccc;
+        }
+
+        .vacant-card a {
+            color: #999;
+            pointer-events: none;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .card {
+                padding: 20px;
+            }
+            
+            .container {
+                padding: 0 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 1.5rem;
+            }
+            
+            .card {
+                padding: 15px;
+            }
+            
+            .card h4 {
+                font-size: 1.2rem;
+            }
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1><i class="fas fa-bookmark"></i> Mahadev Homepage</h1>
+    </header>
+
+    <div class="container">
+        <div class="grid">
+            <!-- CSG Card -->
+            <div class="card">
+                <h4><i class="fas fa-building"></i> CSG</h4>
+                
+                <div class="section-title">Internal Apps</div>
+                <a href="https://csgsystems.sharepoint.com/sites/insidecsg">Inside CSG</a>
+                <a href="https://csguniversity.csod.com/samldefault.aspx">CSG University</a>
+                <a href="https://csgsupport-smartit.onbmc.com/smartit/app/#/">Helix-Smart IT</a>
+                <a href="https://oracleebs-prod.csgi.com/OA_HTML/AppsLogin">Oracle</a>
+                <a href="https://app.eu1.chromeriver.com/login/sso/saml?CompanyID=csgi.com">ChromeRiver</a>
+                <a href="https://wd5.myworkday.com/csgi/login.flex">Workday</a>
+                <a href="https://csgsupport-dwp.onbmc.com/">Helix Support Portal</a>
+                <a href="https://outlook.office365.com">Outlook Office 365</a>
+                <a href="https://my.csgsupport.com/files/onlinesupport/se/cyclede/default.aspx">MyCSG-TSM Developer</a>
+                <a href="https://kulvpn.csgsupport.com/+CSCOE+/logon.html">Cisco AnyConnect</a>
+                <a href="https://confluence.csgicorp.com/display/GSSP">GSD - Standards of Practice</a>
+                <a href="https://csgsystems.sharepoint.com/sites/brand">CSG BRAND</a>
+                <a href="https://degreed.com/explore/208737#/">Leading@CSG Trail Map</a>
+                <a href="https://csgsystems.sharepoint.com/sites/Development/SitePages/Performance-Management.aspx?OR=Teams-HL&CT=1673508187318">Performance Management</a>
+                <a href="https://csgsystems.sharepoint.com/sites/InsideCSG/SitePages/15-on-15.aspx?OR=Teams-HL&CT=1645032882411&sourceId=&params=%7b%22AppName%22%3a%22Teams-Desktop%22%2c%22AppVersion%22%3a%2227/22010300409%22%7d">15 on 15</a>
+                <a href="https://csgsystems.sharepoint.com/sites/TravelManagement/SitePages/Travel-Management.aspx?OR=Teams-HL&CT=1715754058420&clickparams=eyJBcHBOYW1lIjoiVGVhbXMtRGVza3RvcCIsIkFwcFZlcnNpb24iOiI0OS8yNDA0MTEyMjMxNSIsIkhhc0ZlZGVyYXRlZFVzZXIiOmZhbHNlfQ%3D%3D">Travel Management</a>
+                
+                <div class="section-title">Sales</div>
+                <a href="https://csgsystems.sharepoint.com/sites/salesplaybook">CSG Sales Playbook</a>
+                <a href="https://csgsystems.sharepoint.com/sites/uncle/SitePages/Homepage%207.aspx">CSG UNCLE</a>
+                <a href="https://csgsystems.sharepoint.com/sites/SDD/default.aspx">CSG Solution Page</a>
+                
+                <div class="section-title">Internal Service Desk</div>
+                <a href="https://confluence.csgicorp.com/display/ASAP/ASAP+Home">ASAP</a>
+                <a href="https://csgsystems.sharepoint.com/sites/isd/SiteAssets/ISCHome.aspx">Internal Service Desk (ISD)</a>
+                <a href="https://csgsystems.sharepoint.com/sites/isd/SitePages/iscContact.aspx">Contact the ISC</a>
+                <a href="https://selfserve.csgicorp.net/">Self Service</a>
+                <a href="https://confluence.csgicorp.com/display/JHC/User+Macro+Group+Lookup?pageId=829855383&run_displaylan_id=dhirav01&run_displaylan=run#UserMacroGroupLookup-JSearch">User Macro Group Lookup</a>
+            </div>
+
+            <!-- Telenor Denmark B2B Card -->
+            <div class="card">
+                <h4><i class="fas fa-mobile-alt"></i> Telenor Denmark B2B</h4>
+                
+                <div class="section-title">OPN</div>
+                <a href="#">Ascendon Phase 2 - 79576</a>
+                <a href="#">Ascendon Phase 3 - 79568</a>
+                
+                <div class="section-title">Environment</div>
+                <a href="https://qail-sbx.testing.engineering.telflow.com/portal/">Q&O SBX</a>
+                <a href="https://invision.sbx1.ascendon.tv/">ASC SBX1</a>
+                <a href="https://dev.azure.com/Ascendon/Telenor/_git">Git Repo</a>
+                
+                <div class="section-title">Development</div>
+                <a href="https://confluence.csgicorp.com/spaces/TLNRDNMK/pages/1893707372/PBS+-+Direct+Debit+Payment+via+Betalingsservice">PBS LLD</a>
+                <a href="https://confluence.csgicorp.com/spaces/TLNRDNMK/pages/1720148917/Nordea+Bank+-+Enterprise">Nordea LLD</a>
+                
+                <div class="section-title">CSG Confluence</div>
+                <a href="https://confluence.csgicorp.com/display/TLNRDNMK/Overview">Home - Overview</a>
+                <a href="https://confluence.csgicorp.com/display/TLNRDNMK/Logical+Architecture+Design">Logical Architecture Design</a>
+                <a href="https://confluence.csgicorp.com/display/TLNRDNMK/Interfaces+Table">Interfaces Table</a>
+                <a href="https://confluence.csgicorp.com/pages/viewpage.action?pageId=1857791678">B2B R&D Liaison</a>
+                <a href="https://confluence.csgicorp.com/display/TLNRDNMK/Telenor+B2B+Core+Enhancement+Features+Tracking">Core Enhancement</a>
+                <a href="https://csgsystems.sharepoint.com/:x:/t/TelenorDenmark3/EVY7cWFA4KRFp_11U7JYLdgBuj4WvRo1VBjHQdAi7Et7LA?e=odlIwR">Telenor B2B Staffing Estimates</a>
+                <a href="https://jira.csgicorp.com/secure/RapidBoard.jspa?rapidView=7563&projectKey=ASCTNORIII">Telenor B2B Scrum Board</a>
+                <a href="https://jira.csgicorp.com/projects/ASCTNORB2B/summary">Telenor B2B Feature Board</a>
+                <a href="https://jira.csgicorp.com/secure/Dashboard.jspa?selectPageId=85110">Telenor B2B Feature Dashboard</a>
+                <a href="https://jira.csgicorp.com/secure/Dashboard.jspa?selectPageId=85210">Telenor B2B Story Dashboard</a>
+                <a href="https://jira.csgicorp.com/secure/Dashboard.jspa?selectPageId=82514">Telenor B2C Feature Dashboard</a>
+                <a href="https://confluence.csgicorp.com/pages/viewpage.action?pageId=1928898637">CR List</a>
+                
+                <div class="section-title">CSG Sharepoint</div>
+                <a href="https://csgsystems.sharepoint.com/:x:/r/teams/TelenorDenmark3/Shared%20Documents/B2B%20Delivery/B2B%20Team%20Cut%20Capacity/TNR_B2B_Capacity%20Planing.xlsx?d=wd515ab3365f149678926b5f5130185aa&csf=1&web=1&e=9O7BHa">Team Capacity</a>
+                <a href="https://csgsystems.sharepoint.com/teams/TelenorDenmark3/Shared%20Documents/Forms/AllItems.aspx?ga=1&id=%2Fteams%2FTelenorDenmark3%2FShared%20Documents%2FB2B%20Delivery&viewid=1304bb13%2Df364%2D454e%2D8397%2Dff0e7c333092">B2B Delivery</a>
+                <a href="https://csgsystems-my.sharepoint.com/:p:/g/personal/john_fendley_csgi_com/EQy-dyfKdFRIikSrEr8NWacBLPt8RhhF1QQ4v8wL5SGzDw?e=CpiWxz">Ascendon + Q&O Scope</a>
+                <a href="https://csgsystems.sharepoint.com/:f:/t/TelenorDenmark3/EoSlVH0blY5Ls63dOVl5JHUBLJP_1uXhQQ4-oUVBce3P5w?e=56TWt5">CFIT Requirements</a>
+                
+                <div class="section-title">Definition</div>
+                <a href="https://miro.com/app/board/uXjVIV2ee8Y=/">Miro Board</a>
+                
+                <div class="section-title">General</div>
+                <a href="https://proservportal.csgicorp.com/?page_id=8161">Quote & Order E-learning</a>
+                <a href="https://confluence.csgicorp.com/display/TLNRDNMK/E-mail+Distribution+Lists">Distribution List</a>
+                
+                <div class="section-title">Telenor Docs</div>
+                <a href="https://csgsystems.sharepoint.com/:b:/t/TelenorDenmark3/EbaaUpXs_dJEgyUNLqI3e8ABGY3MB69BWfymEn2eaQMdag?e=2ZkDjZ">Annex 16.1.A - Business Requirements.pdf</a>
+                
+                <div class="section-title">Telenor Sharepoint</div>
+                <a href="https://telenorgroup.sharepoint.com/sites/Telenor4.0MainsiteTelenorAS/Shared%20Documents/Forms/AllItems.aspx">Telenor Sharepoint</a>
+                <a href="https://telenorgroup.sharepoint.com/:f:/r/sites/Telenor4.0MainsiteTelenorAS/Shared Documents/Business service layer (BSL)/01. Definition/B2B/Telenor info/Pool Concept?csf=1&web=1&e=NsdCfN">Pool Concept</a>
+                <a href="https://telenorgroup.sharepoint.com/:b:/r/sites/Telenor4.0MainsiteTelenorAS/Shared Documents/Business service layer (BSL)/01. Definition/B2B/Telenor info/Telenor 4.0 - B2B clarification - CSG.pdf?csf=1&web=1&e=fez0h2">Telenor 4.0 - B2B clarification - CSG</a>
+                <a href="https://telenorgroup.sharepoint.com/:x:/r/sites/Telenor4.0MainsiteTelenorAS/Shared%20Documents/Business%20service%20layer%20(BSL)/01.%20Definition/B2B/Telenor%20B2B%20Workshop%20MOM%20%20-%20Editable.xlsx?d=w68adcad29b9b4fd0bd86611c463a4487&csf=1&web=1&e=7ILWgb">Telenor B2B Workshop MOM (Action Tracker)</a>
+                <a href="https://telenorgroup.sharepoint.com/:f:/r/sites/Telenor4.0MainsiteTelenorAS/Shared%20Documents/Business%20service%20layer%20(BSL)/01.%20Definition/Documents%20for%20review/B2B%20Workstream/PSR%20Blueprint?csf=1&web=1&e=u0LLWe">PSR Blueprint</a>
+            </div>
+
+            <!-- Vacant Cards -->
+            <div class="card vacant-card">
+                <h4><i class="fas fa-plus-circle"></i> Available Section</h4>
+                <a href="#">Add your links here</a>
+                <a href="#">Customize this section</a>
+                <a href="#">Perfect for new bookmarks</a>
+            </div>
+
+            <div class="card vacant-card">
+                <h4><i class="fas fa-plus-circle"></i> Available Section</h4>
+                <a href="#">Add your links here</a>
+                <a href="#">Customize this section</a>
+                <a href="#">Perfect for new bookmarks</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
